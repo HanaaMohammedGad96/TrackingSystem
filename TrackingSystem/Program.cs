@@ -16,7 +16,7 @@ using (var context = new ApplicationDbContext())
                      TotalTime = g.Sum(ep => ep.TimeInMinutes)
                  };
 
-    Console.WriteLine("\nStored Procedure: Get managerName and total time >= 1000 for its employees per project according startDate and endDate");
+    Console.WriteLine("\nStored Procedure: Get managerName and total time for its employees per project ");
     foreach (var item in result)
     {
         Console.WriteLine($"{item.ManagerName} - {item.ProjectName}: {item.TotalTime} minutes");
